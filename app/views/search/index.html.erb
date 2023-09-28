@@ -1,0 +1,28 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Search Order Status</h1>
+
+<%= form_with(url: search_path, method: 'get', local: true) do %>
+  <%= text_field_tag(:search, nil, placeholder: 'Enter order ID', id: 'search') %>
+  <%= submit_tag("Search") %>
+<% end %>
+
+<br /><br />
+
+<table>
+  <thead>
+    <tr>
+      <th>ID</th>
+      <th>Status</th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @parcels.each do |parcel| %>
+      <tr>
+        <td><%= parcel.id %></td>
+        <td><%= parcel.status %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>

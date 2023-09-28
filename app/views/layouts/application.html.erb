@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>CourierService</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+
+    <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+  </head>
+
+  <body>
+
+    <ul>
+      <li><a href="/">Home</a></li>
+      <li><a href="/search">Search Orders</a></li>
+      <li><a href="/parcels">Parcels</a></li>
+      <li><a href="/users">Manage Users</a></li>
+      <li><a href="/service_types">Service Types</a></li>
+    </ul>
+
+    <%= yield %>
+  </body>
+</html>

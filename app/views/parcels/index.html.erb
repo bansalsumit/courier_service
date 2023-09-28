@@ -1,0 +1,39 @@
+<p id="notice"><%= notice %></p>
+
+<h1>List Parcels</h1>
+
+<br />
+
+<%= link_to 'New Parcel', new_parcel_path %>
+
+<br /><br />
+
+<table>
+  <thead>
+    <tr>
+      <th>Weight</th>
+      <th>Status</th>
+      <th>Service Type</th>
+      <th>Payment Mode</th>
+      <th>Sender</th>
+      <th>Receiver</th>
+      <th colspan="3">Actions</th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @parcels.each do |parcel| %>
+      <tr>
+        <td><%= parcel.weight %></td>
+        <td><%= parcel.status %></td>
+        <td><%= parcel.service_type.name %></td>
+        <td><%= parcel.payment_mode %></td>
+        <td><%= parcel.sender.name %></td>
+        <td><%= parcel.receiver.name %></td>
+        <td><%= link_to 'Show', parcel %></td>
+        <td><%= link_to 'Edit', edit_parcel_path(parcel) %></td>
+        <td><%= link_to 'Destroy', parcel, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
