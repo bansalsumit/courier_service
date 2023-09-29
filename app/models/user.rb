@@ -9,6 +9,6 @@ class User < ApplicationRecord
 
 
 	def name_with_address
-		@name_with_address ||= [name, address.address_line_one, address.city, address.state, address.country, address.pincode].join('-')
+		@name_with_address ||= [name, address.mobile_number, address.address_line_one, address.city, address.state, address.country, address.pincode].join('-')
 	end
 end
