@@ -7,17 +7,23 @@
     <%= csp_meta_tag %>
 
     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
-    <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <%
+=begin%>
+ <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %> 
+<%
+=end%>
   </head>
 
   <body>
-
+    <p class="notice"><%= notice %></p>
+    <p class="alert"><%= alert %></p>
     <ul>
       <li><a href="/">Home</a></li>
       <li><a href="/search">Search Orders</a></li>
       <li><a href="/parcels">Parcels</a></li>
       <li><a href="/users">Manage Users</a></li>
       <li><a href="/service_types">Service Types</a></li>
+      <li><a href="/reports">Reports</a></li>
     </ul>
 
     <%= yield %>

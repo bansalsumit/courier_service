@@ -1,0 +1,15 @@
+<table>
+  <thead>
+    <tr>
+      <th>file</th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @reports.each do |report| %>
+      <tr>
+        <td><%= link_to report.report_url, report.report_url %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>

@@ -26,6 +26,7 @@ gem 'jbuilder', '~> 2.7'
 # Reduces boot times through caching; required in config/boot.rb
 gem 'bootsnap', '>= 1.4.4', require: false
 gem 'sidekiq'
+gem "sidekiq-cron"
 gem 'pg', '~> 1.2', '>= 1.2.3'
 
 group :development, :test do
@@ -54,3 +55,9 @@ end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
+
+gem "devise", "~> 4.9"
+gem 'carrierwave', '~> 3.0'
+gem 'carrierwave-base64'
+gem 'rubyXL', '~> 3.4', '>= 3.4.25'
+gem 'whenever', require: false

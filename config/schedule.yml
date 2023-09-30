@@ -1,0 +1,4 @@
+my_first_job:
+  cron: "0 0 0 * * *"
+  class: "CourierReportGenerator"
+  # NOTE: Generate CourierReportGenerator report every day at 00:00 AM
